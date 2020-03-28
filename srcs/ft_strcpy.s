@@ -12,7 +12,7 @@ _ft_cpy :
     mov BYTE [rax + rbx], dl ; on remplit la dst
     cmp dl, 0 ; on verifie que ca n'est pas le dernier char
     je _ft_ret ; si oui = ret
-    jne _ft_cpy : si non = on continue le remplissage
+    jne _ft_cpy ; si non = on continue le remplissage
 _ft_ret  :
     pop rbx ; on libere l'espace de i + src
     pop rcx
