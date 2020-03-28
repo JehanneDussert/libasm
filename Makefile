@@ -1,17 +1,17 @@
 NA = nasm
 CC = gcc
-
 NA_FLAGS = -f macho64
-NAME = libasm.a
+
 SRCS = srcs/ft_write.s srcs/ft_strlen.s srcs/ft_strcpy.s srcs/ft_strcmp.s \
 		srcs/ft_strdup.s srcs/ft_read.s
 
 OBJS	= ${SRCS:.s=.o}
-%.o:			%.s
-				$(NA) $(NA_FLAGS) $<
+%.o:	%.s
+			$(NA) $(NA_FLAGS) $<
 
-$(NAME)	:	${OBJS}
-		${NAME} ${OBJS}
+NAME = libasm.a
+$(NAME)	: ${OBJS}
+		ar rcs ${NAME} ${OBJS}
 
 all : ${NAME}
 
