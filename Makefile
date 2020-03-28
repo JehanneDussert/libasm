@@ -3,8 +3,8 @@ CC = gcc
 
 NA_FLAGS = -f macho64
 NAME = libasm.a
-SRCS = srcs/ft_write.s srcs/ft_strlen.s srcs/ft_strcpy.s srcs/ft_strcmp \
-		srcs/ft_read.s srcs/ft_strdup.s
+SRCS = srcs/ft_write.s srcs/ft_strlen.s srcs/ft_strcpy.s srcs/ft_strcmp.s \
+		srcs/ft_strdup.s srcs/ft_read.s
 
 OBJS	= ${SRCS:.s=.o}
 %.o:			%.s
