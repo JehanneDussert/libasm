@@ -3,7 +3,6 @@ global _ft_strlen
 _ft_strlen :
     push  rcx
     xor   rcx, rcx
-    jmp _ft_cmp
 _ft_cmp :
     cmp BYTE [rdi], 0
     jz _ft_ret
