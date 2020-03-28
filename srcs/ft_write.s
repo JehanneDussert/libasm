@@ -11,3 +11,4 @@ _ft_write :
     cmp rax, rdx
     jne not_ok
     ret
+    

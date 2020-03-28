@@ -9,11 +9,11 @@ _ft_strcmp :
     mov rdx, rdi
 _ft_cmp :
     inc rbx
-    cmp BYTE [rcx + rbx], 0
+    cmp BYTE [rcx + rbx], 0 ; on verifie que s1 n'est pas finie
     je _ft_equal
-    cmp BYTE [rdx + rbx], 0
+    cmp BYTE [rdx + rbx], 0 ; on verifie que s2 n'est pas finie
     je _ft_equal
-    mov dl, BYTE [rcx + rbx]
+    mov dl, BYTE [rcx + rbx] ; on cree un tmp pour comparer les str
     cmp dl, BYTE [rdx + rbx]
     jne _ft_sub
     je _ft_cmp
@@ -28,3 +28,4 @@ _ft_ret :
     pop rcx
     pop rdx
     ret
+    
