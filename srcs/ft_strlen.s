@@ -1,15 +1,27 @@
-global _ft_strlen
-    section .text
-_ft_strlen :
-    push  rcx
-    xor   rcx, rcx
-_ft_cmp :
-    cmp BYTE [rdi], 0
-    jz _ft_ret
-    inc rcx
-    inc rdi
-    jmp _ft_cmp
-_ft_ret  :
-    mov rax, rcx
-    pop rcx
-    ret
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_strlen.s                                        :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jdussert <jdussert@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/08/19 10:56:18 by jdussert          #+#    #+#              #
+#    Updated: 2020/08/19 14:00:00 by jdussert         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+global ft_strlen
+	section .text
+ft_strlen :
+	push rcx
+	xor	rcx, rcx
+ft_cmp :
+	cmp BYTE [rdi], 0
+	jz ft_ret
+	inc rcx
+	inc rdi
+	jmp ft_cmp
+ft_ret  :
+	mov rax, rcx
+	pop rcx
+	ret
