@@ -6,12 +6,12 @@
 /*   By: jdussert <jdussert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 10:53:39 by jdussert          #+#    #+#             */
-/*   Updated: 2020/08/19 15:18:10 by jdussert         ###   ########.fr       */
+/*   Updated: 2020/08/19 15:22:51 by jdussert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "../includes/libasm.h"
+#include "includes/libasm.h"
 #include <fcntl.h>
 #include <string.h>
 #include <stdlib.h>
